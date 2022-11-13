@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: tap-gui-catalog-info
-  description: A sample catalog for Backstage
+  name: hin-vmware-catalog
+  description: A catalog for Backstage
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
@@ -11,3 +11,4 @@ spec:
     - ./groups/default-org.yaml
     - ./systems/tap-gui-system.yaml
     - ./domains/tap-gui-domain.yaml
+    - https://github.com/hinyinlam/hin-tap-demo/blob/main/catalog/catalog-info.yaml
