@@ -2,8 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: palm-web
-  title: "Web interface for reading palm lines"
-  description: "This component mainly interact with user to visualize palm reading result"
+  title: "Palm Web"
+  description: "Web interface for reading palm lines - "This component mainly interact with user to visualize palm reading result"
   tags:
     - v1alpha1
   annotations:

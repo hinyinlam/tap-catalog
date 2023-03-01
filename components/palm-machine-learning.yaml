@@ -2,8 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: palm-machine-learning
-  title: An RESTFul API for abstracting both incremental learning and inferening of palm reading
-  description: This component mainly interact with user to visualize palm reading result
+  title: "Palm Machine Learning"
+  description: "An RESTFul API for abstracting both incremental learning and inferening of palm reading"
   tags:
     - v1alpha1
   annotations:
