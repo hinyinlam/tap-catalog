@@ -1,14 +1,17 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: hin-vmware-catalog
-  description: A catalog for Backstage
+  name: palm-reading-catalog-data
+  title: Palm Reading catalog data location
+  description: A marker to all catalog info for Palm Reading
   annotations:
     'backstage.io/techdocs-ref': dir:.
 spec:
   targets:
-    - ./components/tap-gui.yaml
-    - ./groups/default-org.yaml
-    - ./systems/tap-gui-system.yaml
-    - ./domains/tap-gui-domain.yaml
-    - https://github.com/hinyinlam/hin-tap-demo/blob/main/catalog/catalog-info.yaml
+    - ./components/palm-machine-learning-api.yaml
+    - ./components/palm-machine-learning.yaml
+    - ./components/palm-web.yaml
+  # - ./groups/default-org.yaml
+  # - ./systems/tap-gui-system.yaml
+  # - ./domains/tap-gui-domain.yaml
+  # - https://github.com/hinyinlam/hin-tap-demo/blob/main/catalog/catalog-info.yaml

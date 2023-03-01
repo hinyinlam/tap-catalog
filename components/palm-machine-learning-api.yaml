@@ -1,0 +1,86 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: palm-machine-learning-api
+  title: Palm Machine Learning API
+  description: The RESTFul API for palm reading using machine learning backend
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: group:fortune-tellers
+  system: palm-reading-system
+  definition: |
+openapi: 3.0.3
+info:
+  title: Swagger Petstore - OpenAPI 3.0
+  description: |-
+    Palm reading API - Of course it's for demo only
+  termsOfService: https://DontBeTooSuperstitious.io
+  contact:
+    email: hinl@vmware.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1-alpha
+externalDocs:
+  description: Read this doc before read the palm - Palm Reading 101
+  url: https://www.wikihow.com/Read-Palms
+servers:
+  - url: https://DontBeTooSuperstitious.io/palm/api/v0.0.1-alpha
+tags:
+  - name: palm
+    description: Everything about your Palm
+    externalDocs:
+      description: Find out more
+      url: https://DontBeTooSuperstitious.io
+
+paths:
+  /palm:
+    post:
+      tags:
+        - palm
+      summary: uplaod a new palm image
+      description: Add a new palm image
+      operationId: addPalmImage
+      requestBody:
+        description: Create a new palm in storage
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+        '405':
+          description: Invalid input
+
+components:
+  schemas:
+    Palm:
+      type: object
+      properties:
+        handId:
+          type: integer
+          format: int64
+          example: 10
+        direction:
+          type: string
+          example: left
+          description: left or right hand
+      xml:
+        name: palm
+  securitySchemes:
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://DontBeTooSuperstitious.io/auth
+          scopes:
+            write:palm: upload palm image
+            read:palm: read your palm
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header

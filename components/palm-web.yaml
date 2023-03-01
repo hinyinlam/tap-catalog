@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: palm-web
+  title: "Web interface for reading palm lines"
+  description: "This component mainly interact with user to visualize palm reading result"
+  tags:
+    - v1alpha1
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app=backstage'
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: web
+  lifecycle: experimental
+  owner: group:fortune-tellers
+  system: palm-reading-system
+  dependsOn:
+    - component:palm-machine-learning
+    - resource:palm-image-storage
