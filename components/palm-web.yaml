@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: palm-web
   title: "Palm Web"
-  description: "Web interface for reading palm lines - "This component mainly interact with user to visualize palm reading result"
+  description: "Web interface for reading palm lines - This component mainly interact with user to visualize palm reading result"
   tags:
     - v1alpha1
   annotations:

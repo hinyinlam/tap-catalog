@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: palm-reading-system
+  description: The Palm Reading System
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  owner: fortune-tellers
+  domain: superstitious-domain

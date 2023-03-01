@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: superstitious-domain
+  description: A big domain of superstitious practices
+  links:
+    - url: https://en.wikipedia.org/wiki/Superstition#
+      title: Superstitious Wikipedia definition
+      icon: Psychology
+  annotations:
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  owner: psychology-team

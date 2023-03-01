@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: palm-image-storage
+  description: Storage for palm image
+spec:
+  type: s3-bucket
+  owner: group:fortune-tellers
+  system: palm-reading-system

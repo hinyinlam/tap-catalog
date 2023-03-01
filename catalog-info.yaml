@@ -8,9 +8,15 @@ metadata:
     'backstage.io/techdocs-ref': dir:.
 spec:
   targets:
-    - ./components/palm-machine-learning-api.yaml
-    - ./components/palm-machine-learning.yaml
-    - ./components/palm-web.yaml
+    - ./components/*.yaml
+    - ./domains/*.yaml
+    - ./groups/*.yaml
+    - ./users/*.yaml
+    - ./resources/*.yaml
+    - ./system/*.yaml
+  #  - ./components/palm-machine-learning-api.yaml
+  #  - ./components/palm-machine-learning.yaml
+  #  - ./components/palm-web.yaml
   # - ./groups/default-org.yaml
   # - ./systems/tap-gui-system.yaml
   # - ./domains/tap-gui-domain.yaml
