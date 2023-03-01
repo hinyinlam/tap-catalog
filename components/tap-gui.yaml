@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: tap-gui-component
+  title: TAP GUI Component
   description: Tanzu Application Platform GUI Component
   tags:
     - v1alpha1
